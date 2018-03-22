@@ -6,9 +6,13 @@ if [ "${SCRIPT_DEBUG}" = "true" ] ; then
 fi
 
 SRCCONF=/tmp/src/configuration
-
+echo "HERE HERE HERE HERE"
 if [ -d ${SRCCONF} ]; then
   echo "Copying config files from project..."
+  echo "1----created the dir"
+  mkdir -p $AMQ_HOME/conf
+echo "i----created the dir"
+ls -l $AMQ_HOME/conf 
   cp -v ${SRCCONF}/* $AMQ_HOME/conf/
 fi
 
