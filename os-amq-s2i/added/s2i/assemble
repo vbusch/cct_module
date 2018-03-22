@@ -9,6 +9,7 @@ SRCCONF=/tmp/src/configuration
 
 if [ -d ${SRCCONF} ]; then
   echo "Copying config files from project..."
+  mkdir -p $AMQ_HOME/conf/
   cp -v ${SRCCONF}/* $AMQ_HOME/conf/
 fi
 
